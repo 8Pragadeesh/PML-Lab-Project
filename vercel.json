@@ -1,9 +1,17 @@
 {
   "version": 2,
   "builds": [
-    { "src": "app.py", "use": "@vercel/python" }
+    { "src": "app.py", "use": "@vercel/python" "config": {
+        "maxLambdaSize": "150mb"}
+    }
   ],
   "routes": [
-    { "src": "/", "dest": "/app.py" }
+    { "src": "./", "dest": "/app.py" }
   ]
+}
+{
+  "env": {
+    "MY_KEY": "this is the value",
+    "SECRET": "@my-secret-name"
+  }
 }
