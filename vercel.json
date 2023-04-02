@@ -1,5 +1,4 @@
 {
-  {
   "version": 2,
   "builds": [
     {
@@ -9,13 +8,10 @@
         "maxLambdaSize": "200mb"
       }
     }
-  ]
-}
+  ],
   "routes": [
     { "src": "./", "dest": "/app.py" }
-  ]
-}
-{
+  ],
   "env": {
     "MY_KEY": "this is the value",
     "SECRET": "@my-secret-name"
