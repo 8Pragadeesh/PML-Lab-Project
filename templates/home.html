@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Drug Classification</title>
+  </head>
+  <body style="background-color:#E8DAEF;">
+  
+    <center>
+    <h1>Drug Classification</h1>
+    <form method="POST" action="{{ url_for('predict') }}" enctype="multipart/form-data">
+      
+      <p>Age<br>
+        <input type="number" name="Age" min="15" max="74" required="required"/><br/>
+		
+      <p>Gender
+		<input type ="radio" name="Sex"  value= 0> Female
+		<input type ="radio" name="Sex"  value= 1> Male
+      </p>
+	  
+	  <p>BP
+		<input type ="radio" name="BP"  value= 1> Low
+		<input type ="radio" name="BP"  value= 2> Normal
+		<input type ="radio" name="BP"  value= 0> High
+      </p>
+	  
+	  <p>Cholesterol
+		<input type ="radio" name="Cholesterol"  value= 0> High
+		<input type ="radio" name="Cholesterol"  value= 1> Normal
+      </p>
+	  
+      <p>Potassium Ration<br>
+        <input type="number" name="Na_to_K"  required="required"/><br/>
+		
+	  
+	<p><input type="submit" value="Predict"></p>
+    </form>
+	</center>
+  </body>
+</html
