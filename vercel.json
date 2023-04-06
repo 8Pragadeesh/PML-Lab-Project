@@ -2,16 +2,14 @@
   "builds": [
     {
       "src": "app.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "200mb"
-      }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "app.py"
-    }
-  ]
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/" }
+  ],
+  "env": {
+    "VERCEL_GUNICORN_CMD": "gunicorn app:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind :$PORT"
+  }
 }
