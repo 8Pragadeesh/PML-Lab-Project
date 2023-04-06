@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculate The Fish Weights</title>
+  </head>
+  <body style="background-color:#E8DAEF;">
+  <style>
+body {
+  background-image: url('static/css/reg1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+    <center>
+    <h1>Calculate The Fish Weights</h1>
+    <form <form action="/validates" method="POST" enctype="multipart/form-data">
+      	
+      <p>Species
+		<input type ="radio" name="Species"  value= 0> Bream
+		<input type ="radio" name="Species"  value= 4> Roach
+		<input type ="radio" name="Species"  value= 6> Whitefish
+		<input type ="radio" name="Species"  value= 1> Parkki
+		<input type ="radio" name="Species"  value= 2> Perch
+		<input type ="radio" name="Species"  value= 3> Pike
+		<input type ="radio" name="Species"  value= 5> Smelt
+      </p>
+	  
+      <p>Length1<br>
+        <input type="number" name="Length1"  required="required"/><br/>
+		
+	  <p>Length2<br>
+        <input type="number" name="Length2"  required="required"/><br/>
+		
+	  <p>Length3<br>
+        <input type="number" name="Length3"  required="required"/><br/>
+		
+	  <p>Height<br>
+        <input type="number" name="Height"  required="required"/><br/>
+		
+	  <p>Width<br>
+        <input type="number" name="Width"  required="required"/><br/>
+		
+	<p><input type="submit" value="Predict"></p>
+	
+		<br><h2>{{ prediction }}</h2></br>
+	</center>
+  </body>
+</html
