@@ -5,10 +5,17 @@
     <title>Drug Classification</title>
   </head>
   <body style="background-color:#E8DAEF;">
-  
+  <style>
+body {
+  background-image: url('static/css/class1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
     <center>
     <h1>Drug Classification</h1>
-    <form method="POST" action="{{ url_for('predict') }}" enctype="multipart/form-data">
+    <form <form action="/validate" method="POST" enctype="multipart/form-data">
       
       <p>Age<br>
         <input type="number" name="Age" min="15" max="74" required="required"/><br/>
@@ -34,6 +41,10 @@
 		
 	  
 	<p><input type="submit" value="Predict"></p>
+	
+	
+		<br><h2>{{ prediction }}</h2></br>
+		
     </form>
 	</center>
   </body>
